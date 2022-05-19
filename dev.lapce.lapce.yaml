@@ -24,22 +24,7 @@ modules:
           type: git
           tag-pattern: ^v([\d.]+)$
       # Cargo sources must be updated manually using flatpak-cargo-generator.py.
-      # Until https://github.com/lapce/lapce/issues/509 is resolved,
-      # '"disable-submodules": true' must be added to these repositories:
-      # - https://github.com/lapce/glutin
-      # - https://github.com/lapce/winit
       - generated-sources.json
-      # Separate .desktop and .metainfo.xml can be deleted with next upstream release.
-      - type: file
-        url: https://raw.githubusercontent.com/lapce/lapce/db27d5e703fb945a7ca33222de19a06e082f247f/extra/linux/dev.lapce.lapce.desktop
-        dest: extra/linux
-        dest-filename: dev.lapce.lapce.desktop
-        sha256: 07e6b1b685c88b8f23919f58f9e2210a0357836b12026b5a04b0c18b4acfd34a
-      - type: file
-        url: https://raw.githubusercontent.com/lapce/lapce/db27d5e703fb945a7ca33222de19a06e082f247f/extra/linux/dev.lapce.lapce.metainfo.xml
-        dest: extra/linux
-        dest-filename: dev.lapce.lapce.metainfo.xml
-        sha256: 2de57319ed60f6dc4e11a5f538f7e9ee72caae4a023add84bf3b23e7b579c912
     buildsystem: simple
     build-commands:
       - cargo --offline fetch --manifest-path Cargo.toml --verbose
