@@ -18,11 +18,11 @@ modules:
     sources:
       - type: git
         url: https://github.com/lapce/lapce
-        tag: v0.1.0
-        commit: 8d0b0932b5fa45ea52d1e54d7e57cbf9bca1c490
+        tag: v0.1.1
+        commit: 458c8b4787e4bf9a03037cb7aefcacba6e866732
         x-checker-data:
           type: git
-          tag-pattern: "^v([\\d.]+)$"
+          tag-pattern: ^v([\d.]+)$
       # Cargo sources must be updated manually using flatpak-cargo-generator.py.
       # Until https://github.com/lapce/lapce/issues/509 is resolved,
       # '"disable-submodules": true' must be added to these repositories:
