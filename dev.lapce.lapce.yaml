@@ -19,11 +19,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/lapce/lapce
-        tag: v0.1.1
-        commit: 458c8b4787e4bf9a03037cb7aefcacba6e866732
-        x-checker-data:
-          type: git
-          tag-pattern: ^v([\d.]+)$
+        commit: 0f02410926aee860e5b1135ee6f19332a6d9de61
       # Cargo sources must be updated manually using flatpak-cargo-generator.py.
       - generated-sources.json
     buildsystem: simple
