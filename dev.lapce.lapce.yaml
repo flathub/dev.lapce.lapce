@@ -17,14 +17,7 @@ finish-args:
 modules:
   - name: lapce
     sources:
-      - type: git
-        url: https://github.com/lapce/lapce
-        tag: v0.1.1
-        commit: 458c8b4787e4bf9a03037cb7aefcacba6e866732
-        x-checker-data:
-          type: git
-          tag-pattern: ^v([\d.]+)$
-      # Cargo sources must be updated manually using flatpak-cargo-generator.py.
+      - lapce-git.json
       - generated-sources.json
     buildsystem: simple
     build-commands:
