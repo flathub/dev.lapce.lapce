@@ -4,6 +4,7 @@ runtime-version: 21.08
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
+  - org.freedesktop.Sdk.Extension.llvm13
 command: lapce
 finish-args:
   - --device=dri
@@ -28,6 +29,10 @@ modules:
       - install -Dm0644 extra/linux/${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop
       - install -Dm0644 extra/linux/${FLATPAK_ID}.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml
     build-options:
-      append-path: /usr/lib/sdk/rust-stable/bin
+      append-path: /usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/llvm13/bin
       env:
         CARGO_HOME: /run/build/lapce/cargo
+        CARGO_TARGET_X86_64_UNKNOWN_LINUX_GNU_LINKER: clang
+        CARGO_TARGET_X86_64_UNKNOWN_LINUX_GNU_RUSTFLAGS: -C link-arg=-fuse-ld=/usr/lib/sdk/rust-stable/bin/mold
+        CARGO_TARGET_AARCH64_UNKNOWN_LINUX_GNU_LINKER: clang
+        CARGO_TARGET_AARCH64_UNKNOWN_LINUX_GNU_RUSTFLAGS: -C link-arg=-fuse-ld=/usr/lib/sdk/rust-stable/bin/mold
