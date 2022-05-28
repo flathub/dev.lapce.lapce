@@ -1,0 +1,42 @@
+# originates from https://github.com/flathub/net.veloren.veloren/blob/0d514284af5e646beb1029ae942418780222d5cc/.github/workflows/auto-update.yml
+
+name: Update generated-source.json
+
+env:
+  BUILDER_TOOLS_URL: https://github.com/flatpak/flatpak-builder-tools.git
+  BUILDER_TOOLS_BRANCH: master
+
+on:
+  pull_request:
+    branches: [ master ]
+    paths: [ lapce-git.json ]
+
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-22.04
+    if: ${{ github.event.actor.login == 'flathubbot'}}
+    steps:
+      - name: Install dependencies
+        run: |
+          set -e
+          sudo apt install python3-toml python3-aiohttp
+
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Download flatpak-builder-tools
+        run: |
+          git clone -b ${BUILDER_TOOLS_BRANCH} \
+                       ${BUILDER_TOOLS_URL} \
+                       builder-tools
+
+      - name: Run update
+        run: |
+          set -e
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git config user.name "Github workflow"
+          ./update.py lapce-git.json -g builder-tools/cargo/flatpak-cargo-generator.py -k
+          git push https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}

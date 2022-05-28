@@ -55,6 +55,8 @@ def update_app_source(app_source, target):
         app_source.update({"commit": latest_commit})
         if "tag" in app_source:
             del app_source["tag"]
+        if "x-checker-data" in app_source:
+            del app_source["x-checker-data"]
     elif target == "tag":
         latest_tag = get_latest_tag(app_source["url"])
         if latest_tag[1] == app_source["commit"]:
@@ -132,13 +134,16 @@ def main():
     parser.add_argument("-o", "--gen-output", default="generated-sources.json")
     parser.add_argument("-n", "--new-branch", action="store_true")
     parser.add_argument("-t", "--target", default="commit")
+    parser.add_argument("-k", "--keep-version", action="store_true")
     parser.add_argument("app_source_json")
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.INFO)
 
     with open(args.app_source_json, "r") as f:
-        app_source = update_app_source(json.load(f), args.target)
+        app_source = json.load(f)
+    if not args.keep_version:
+        app_source = update_app_source(app_source, args.target)
     generated_sources = generate_sources(
         app_source,
         clone_dir=args.clone_dir,
@@ -149,13 +154,17 @@ def main():
         json.dump(app_source, o, indent=4)
     with open(args.gen_output, "w") as g:
         json.dump(generated_sources, g, indent=4)
-
-    branch, new_commit = commit_changes(
-        app_source,
-        files=[args.app_source_json, args.gen_output],
-        on_new_branch=args.new_branch,
-    )
-    logging.info(f"Created commit {new_commit[:7]} on branch {branch}")
+    git_status = run(["git", "status", "-s", args.app_source_json, args.gen_output])
+    logging.info(f"Current git status: {git_status if git_status else 'clean'}")
+    if git_status:
+        branch, new_commit = commit_changes(
+            app_source,
+            files=[args.app_source_json, args.gen_output],
+            on_new_branch=args.new_branch,
+        )
+        logging.info(f"Created commit {new_commit[:7]} on branch {branch}")
+    else:
+        logging.info("Nothing to commit")
 
 
 if __name__ == "__main__":
