@@ -1,8 +1,8 @@
 {
     "type": "git",
     "url": "https://github.com/lapce/lapce",
-    "commit": "458c8b4787e4bf9a03037cb7aefcacba6e866732",
-    "tag": "v0.1.1",
+    "commit": "2ea657711a244c0e857e34120a70f2a9e1bc1c88",
+    "tag": "v0.1.2",
     "x-checker-data": {
         "type": "git",
         "tag-pattern": "^v([\\d.]+)$"
