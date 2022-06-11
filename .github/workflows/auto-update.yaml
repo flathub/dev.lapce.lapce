@@ -16,7 +16,6 @@ on:
 jobs:
   update:
     runs-on: ubuntu-22.04
-    if: ${{ github.event.actor.login == 'flathubbot'}}
     steps:
       - name: Install dependencies
         run: |
