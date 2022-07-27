@@ -135,7 +135,8 @@
         "type": "git",
         "url": "https://github.com/panekj/tree-sitter-yaml",
         "commit": "faed130c65531addfa3edf855e1d417b96c7f163",
-        "dest": "flatpak-cargo/git/tree-sitter-yaml-faed130"
+        "dest": "flatpak-cargo/git/tree-sitter-yaml-faed130",
+        "disable-submodules": true
     },
     {
         "type": "git",
