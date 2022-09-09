@@ -1,8 +1,13 @@
 # Lapce (flatpak)
 
-In this repository you can find the manifests and scripts used to build [Lapce](https://github.com/lapce/lapce) for Flathub.
+This repository contains the manifests and scripts used for building and packaging [Lapce](https://github.com/lapce/lapce) for Flathub.
 
-It makes use of `cargo/flatpak-cargo-generator.py` from [flatpak-builder-tools](https://github.com/flatpak/flatpak-builder-tools) and a modified `update.py` from the [net.veloren.veloren flatpak](https://github.com/flathub/net.veloren.veloren).
+The scripts make use of `cargo/flatpak-cargo-generator.py` from [flatpak-builder-tools](https://github.com/flatpak/flatpak-builder-tools) and a modified `update.py` from [flathub/net.veloren.veloren](https://github.com/flathub/net.veloren.veloren).
+
+## Permissions
+Running a code editor sandboxed can be tricky. Linters and other plugins often need access to source files normally not accessible by the flatpak sandbox. Therefore this flatpak sets the following [permissions](https://docs.flatpak.org/en/latest/sandbox-permissions-reference.html) by default:
+* `filesystem=home`: The whole home directory is accessible by Lapce. That way, for example a per-user rustup installation or a Python virtual environment inside the users home directory can be used.
+* `talk-name=org.freedesktop.Flatpak`: Allows the use of [flatpak-spawn --host](https://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-spawn). To execute a system shell instead of a shell inside the sandbox, set `flatpak-spawn --host /usr/bin/<your_favorite_shell>` as shell command in Lapce settings.
 
 ## Upstream nightly builds
 
