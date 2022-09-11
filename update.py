@@ -49,7 +49,7 @@ def update_app_source(app_source, target):
         latest_commit = get_latest_commit(
             app_source["url"], app_source.get("branch", "master")
         )
-        if latest_commit == app_source["commit"]:
+        if "commit" in app_source.keys() and latest_commit == app_source["commit"]:
             logging.info(f'Commit {app_source["commit"][:7]} is the latest')
             sys.exit(0)
         app_source.update({"commit": latest_commit})
@@ -71,7 +71,8 @@ def update_app_source(app_source, target):
 def generate_sources(
     app_source, clone_dir=None, generator_script=None, generator_args=None
 ):
-    cache_dir = os.environ.get("XDG_CACHE_HOME", os.path.expanduser("~/.cache"))
+    cache_dir = os.environ.get(
+        "XDG_CACHE_HOME", os.path.expanduser("~/.cache"))
 
     assert "commit" in app_source
     if clone_dir is None:
@@ -129,7 +130,8 @@ def commit_changes(app_source, files, on_new_branch=True):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("-g", "--generator", required=False)
-    parser.add_argument("-a", "--generator-arg", action="append", required=False)
+    parser.add_argument("-a", "--generator-arg",
+                        action="append", required=False)
     parser.add_argument("-d", "--clone-dir", required=False)
     parser.add_argument("-o", "--gen-output", default="generated-sources.json")
     parser.add_argument("-n", "--new-branch", action="store_true")
@@ -154,8 +156,10 @@ def main():
         json.dump(app_source, o, indent=4)
     with open(args.gen_output, "w") as g:
         json.dump(generated_sources, g, indent=4)
-    git_status = run(["git", "status", "-s", args.app_source_json, args.gen_output])
-    logging.info(f"Current git status: {git_status if git_status else 'clean'}")
+    git_status = run(
+        ["git", "status", "-s", args.app_source_json, args.gen_output])
+    logging.info(
+        f"Current git status: {git_status if git_status else 'clean'}")
     if git_status:
         branch, new_commit = commit_changes(
             app_source,
