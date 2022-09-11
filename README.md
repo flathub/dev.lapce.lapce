@@ -31,8 +31,8 @@ flatpak-builder --user --install --force-clean build dev.lapce.lapce.yaml
 ## Building a flatpak from custom Lapce repository/branch
 
 Similar to the instructions above, you can build from a different repository or branch for testing:
-- create a new branch: `git checkout -b test-feature-x`
-- edit `lapce-git.json` to point to the desired repository/branch:
+1. create a new branch: `git checkout -b test-feature-x`
+2. edit `lapce-git.json` to point to the desired repository/branch:
 ```json
 {
     "type": "git",
@@ -40,5 +40,6 @@ Similar to the instructions above, you can build from a different repository or 
     "branch": "branch-name"
 }
 ```
-- update the manifests to match the latest commit: `python update.py lapce-git.json`. Run this command again, every time the remote repository changes.
-- build and install the flatpak: `flatpak-builder --user --install --force-clean build dev.lapce.lapce.yaml`
+5. `git add lapce-git.json && git commit -m "Use custom repository"`
+4. update the manifests to match the latest commit: `python update.py lapce-git.json`. Run this command again, every time the remote repository changes.
+5. build and install the flatpak: `flatpak-builder --user --install --force-clean build dev.lapce.lapce.yaml`
