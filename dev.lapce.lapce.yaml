@@ -7,7 +7,7 @@ sdk-extensions:
 command: lapce
 finish-args:
   - --device=dri
-  - --filesystem=home
+  - --filesystem=host
   - --share=ipc
   - --share=network
   - --socket=wayland
