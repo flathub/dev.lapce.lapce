@@ -7,7 +7,7 @@ The scripts make use of `cargo/flatpak-cargo-generator.py` from [flatpak-builder
 ## Permissions
 
 Running a code editor sandboxed can be tricky. Linters and other plugins often need access to source files normally not accessible by the flatpak sandbox. Therefore this flatpak sets the following [permissions](https://docs.flatpak.org/en/latest/sandbox-permissions-reference.html) by default:
-* `filesystem=host`: The whole host filesystem is accessible by Lapce (to work arround issues like [this](https://github.com/flathub/dev.lapce.lapce/issues/3)).
+* `filesystem=host`: The whole host filesystem is accessible by Lapce (to work around issues like [this](https://github.com/flathub/dev.lapce.lapce/issues/3)).
 * `talk-name=org.freedesktop.Flatpak`: Allows the use of [flatpak-spawn --host](https://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-spawn).
 
 ## Upstream nightly builds
