@@ -1,0 +1,12 @@
+--- lapce/cargo/vendor/alacritty_terminal-0.16.1/src/tty/unix.rs.old	2022-09-18 17:38:31.775751627 +0200
++++ lapce/cargo/vendor/alacritty_terminal-0.16.1/src/tty/unix.rs	2022-09-18 17:39:26.736135126 +0200
+@@ -189,7 +189,8 @@
+                 return Err(Error::new(ErrorKind::Other, "Failed to set session id"));
+             }
+ 
+-            set_controlling_terminal(slave);
++            // Disable for flatpak-spawn
++            // set_controlling_terminal(slave);
+ 
+             // No longer need slave/master fds.
+             libc::close(slave);
