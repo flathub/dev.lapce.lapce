@@ -21,12 +21,17 @@ modules:
       - generated-sources.json
       - type: patch
         path: alacritty-no-controlling-term.patch
+      - type: file
+        url: https://raw.githubusercontent.com/lapce/lapce/d5c26901d56c9827ff94fb0f4b63c397de8947d3/extra/images/logo_color.svg
+        dest: extra/images
+        dest-filename: logo_color.svg
+        sha256: 130be2d84c8ec15b844fc0c1c24e9dd42a9d13e46d680ba67af6c94de4c06180
     buildsystem: simple
     build-commands:
       - cargo --offline fetch --manifest-path Cargo.toml --verbose
       - cargo --offline build --no-default-features -p lapce-ui --features all-languages --release --verbose
       - install -Dm0755 target/release/lapce /app/bin/lapce
-      - install -Dm0644 extra/images/logo.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
+      - install -Dm0644 extra/images/logo_color.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
       - install -Dm0644 extra/linux/${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop
       - install -Dm0644 extra/linux/${FLATPAK_ID}.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml
     build-options:
