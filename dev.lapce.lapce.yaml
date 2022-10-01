@@ -22,7 +22,7 @@ modules:
     buildsystem: simple
     build-commands:
       - cargo --offline fetch --manifest-path Cargo.toml --verbose
-      - cargo --offline build --release --verbose
+      - cargo --offline build --no-default-features -p lapce-ui --features all-languages --release --verbose
       - install -Dm0755 target/release/lapce /app/bin/lapce
       - install -Dm0644 extra/images/logo.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
       - install -Dm0644 extra/linux/${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop
