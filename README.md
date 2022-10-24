@@ -10,6 +10,13 @@ Running a code editor sandboxed can be tricky. Linters and other plugins often n
 * `filesystem=host`: The whole host filesystem is accessible by Lapce (to work around issues like [this](https://github.com/flathub/dev.lapce.lapce/issues/3)).
 * `talk-name=org.freedesktop.Flatpak`: Allows the use of [flatpak-spawn --host](https://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-spawn). Lapce opens a host shell automatically if this permission is set (see [upstream PR](https://github.com/lapce/lapce/pull/1084) for details).
 
+## Flathub SDK extensions
+Flathub provides SDK extensions that package development tools for various programming languages. These have to be installed and enabled manually.
+* To get a list of available extensions on your system, run
+`flatpak search org.freedesktop.Sdk.Extension`
+* Install the desired extension with `flatpak install org.freedesktop.Sdk.Extension.rust-stable`
+* To enable the extension you have to add it to the sandbox $PATH by running `flatpak override --user dev.lapce.lapce --env=PATH=/app/bin:/usr/bin:/usr/lib/sdk/rust-stable/bin`
+
 ## Upstream nightly builds
 
 The Lapce developers provide nightly builds for testing. These can be downloaded via their [releases page](https://github.com/lapce/lapce/releases).
