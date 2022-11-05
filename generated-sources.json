@@ -2,8 +2,8 @@
     {
         "type": "git",
         "url": "https://github.com/lapce/druid",
-        "commit": "281fe4bc56a198c7b5da90f65d4047a88153170e",
-        "dest": "flatpak-cargo/git/druid-281fe4b"
+        "commit": "0b9c00fcda238e392e758382f25166cd748fd305",
+        "dest": "flatpak-cargo/git/druid-0b9c00f"
     },
     {
         "type": "git",
@@ -26,8 +26,8 @@
     {
         "type": "git",
         "url": "https://github.com/lapce/piet-wgpu",
-        "commit": "e5d9c4d5a69b3f9b0d34054d2a6a23df0724205e",
-        "dest": "flatpak-cargo/git/piet-wgpu-e5d9c4d"
+        "commit": "bcc134e00834af23c67ac087dc445f4872c2d497",
+        "dest": "flatpak-cargo/git/piet-wgpu-bcc134e"
     },
     {
         "type": "git",
@@ -88,6 +88,12 @@
         "url": "https://github.com/elixir-lang/tree-sitter-elixir",
         "commit": "05e3631c6a0701c1fa518b0fee7be95a2ceef5e2",
         "dest": "flatpak-cargo/git/tree-sitter-elixir-05e3631"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/whatsapp/tree-sitter-erlang",
+        "commit": "a8b8b0e16c4f5552f5e85af3dec976a5d16af8b9",
+        "dest": "flatpak-cargo/git/tree-sitter-erlang-a8b8b0e"
     },
     {
         "type": "git",
@@ -199,6 +205,12 @@
     },
     {
         "type": "git",
+        "url": "https://github.com/oknozor/tree-sitter-sql",
+        "commit": "15dad0f3cae8a094a7dac17d712ea8fb25228011",
+        "dest": "flatpak-cargo/git/tree-sitter-sql-15dad0f"
+    },
+    {
+        "type": "git",
         "url": "https://github.com/himujjal/tree-sitter-svelte",
         "commit": "52e122ae68b316d3aa960a0a422d3645ba717f42",
         "dest": "flatpak-cargo/git/tree-sitter-svelte-52e122a"
@@ -208,6 +220,12 @@
         "url": "https://github.com/szebniok/tree-sitter-wgsl",
         "commit": "272e89ef2aeac74178edb9db4a83c1ffef80a463",
         "dest": "flatpak-cargo/git/tree-sitter-wgsl-272e89e"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/renjisann/tree-sitter-xml",
+        "commit": "422528a43630db6dcc1e222d1c5ee3babd559473",
+        "dest": "flatpak-cargo/git/tree-sitter-xml-422528a"
     },
     {
         "type": "git",
@@ -226,12 +244,6 @@
         "url": "https://github.com/lapce/wasi-experimental-http",
         "commit": "3685f0893ef19c1cca5b16a11ba01ff7ade14a5f",
         "dest": "flatpak-cargo/git/wasi-experimental-http-3685f08"
-    },
-    {
-        "type": "git",
-        "url": "https://github.com/lapce/xi-editor",
-        "commit": "06816cc92e97996c12ec048aa9190b4efc00d1a6",
-        "dest": "flatpak-cargo/git/xi-editor-06816cc"
     },
     {
         "type": "archive",
@@ -301,27 +313,40 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/alacritty_config_derive/alacritty_config_derive-0.1.0.crate",
-        "sha256": "77044c45bdb871e501b5789ad16293ecb619e5733b60f4bb01d1cb31c463c336",
-        "dest": "cargo/vendor/alacritty_config_derive-0.1.0"
+        "url": "https://static.crates.io/crates/alacritty_config/alacritty_config-0.1.0.crate",
+        "sha256": "b0c9edf2a6899fc12e9f8718485fa70f2c311bc86c25ff329783b16de7227dfd",
+        "dest": "cargo/vendor/alacritty_config-0.1.0"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"77044c45bdb871e501b5789ad16293ecb619e5733b60f4bb01d1cb31c463c336\", \"files\": {}}",
-        "dest": "cargo/vendor/alacritty_config_derive-0.1.0",
+        "contents": "{\"package\": \"b0c9edf2a6899fc12e9f8718485fa70f2c311bc86c25ff329783b16de7227dfd\", \"files\": {}}",
+        "dest": "cargo/vendor/alacritty_config-0.1.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/alacritty_terminal/alacritty_terminal-0.16.1.crate",
-        "sha256": "02fb5d4af84e39f9754d039ff6de2233c8996dbae0af74910156e559e5766e2f",
-        "dest": "cargo/vendor/alacritty_terminal-0.16.1"
+        "url": "https://static.crates.io/crates/alacritty_config_derive/alacritty_config_derive-0.2.0.crate",
+        "sha256": "37164df1dc70b36db94e2df45b121c1f57b2946778d5f7e56f4b0d1c118e1b54",
+        "dest": "cargo/vendor/alacritty_config_derive-0.2.0"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"02fb5d4af84e39f9754d039ff6de2233c8996dbae0af74910156e559e5766e2f\", \"files\": {}}",
-        "dest": "cargo/vendor/alacritty_terminal-0.16.1",
+        "contents": "{\"package\": \"37164df1dc70b36db94e2df45b121c1f57b2946778d5f7e56f4b0d1c118e1b54\", \"files\": {}}",
+        "dest": "cargo/vendor/alacritty_config_derive-0.2.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/alacritty_terminal/alacritty_terminal-0.17.0.crate",
+        "sha256": "043d0bc52432b59149ca25e45ea617cc4cfd2e34acc00d2f7ea976b9934be477",
+        "dest": "cargo/vendor/alacritty_terminal-0.17.0"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"043d0bc52432b59149ca25e45ea617cc4cfd2e34acc00d2f7ea976b9934be477\", \"files\": {}}",
+        "dest": "cargo/vendor/alacritty_terminal-0.17.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -1458,19 +1483,6 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/dirs/dirs-3.0.2.crate",
-        "sha256": "30baa043103c9d0c2a57cf537cc2f35623889dc0d405e6c3cccfadbc81c71309",
-        "dest": "cargo/vendor/dirs-3.0.2"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"30baa043103c9d0c2a57cf537cc2f35623889dc0d405e6c3cccfadbc81c71309\", \"files\": {}}",
-        "dest": "cargo/vendor/dirs-3.0.2",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/dirs/dirs-4.0.0.crate",
         "sha256": "ca3aa72a6f96ea37bbc5aa912f6788242832f75369bdfdadcb0e38423f100059",
         "dest": "cargo/vendor/dirs-4.0.0"
@@ -1549,7 +1561,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/druid-281fe4b/druid\" \"cargo/vendor/druid\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/druid-0b9c00f/druid\" \"cargo/vendor/druid\""
         ]
     },
     {
@@ -1561,7 +1573,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/druid-281fe4b/druid-derive\" \"cargo/vendor/druid-derive\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/druid-0b9c00f/druid-derive\" \"cargo/vendor/druid-derive\""
         ]
     },
     {
@@ -1573,7 +1585,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/druid-281fe4b/druid-shell\" \"cargo/vendor/druid-shell\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/druid-0b9c00f/druid-shell\" \"cargo/vendor/druid-shell\""
         ]
     },
     {
@@ -3325,6 +3337,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/lapce-xi-rope/lapce-xi-rope-0.3.1.crate",
+        "sha256": "08ae23edb8cf91f01edd9a87c88623eae3977c8d647a31c57cb12f1a125ca10a",
+        "dest": "cargo/vendor/lapce-xi-rope-0.3.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"08ae23edb8cf91f01edd9a87c88623eae3977c8d647a31c57cb12f1a125ca10a\", \"files\": {}}",
+        "dest": "cargo/vendor/lapce-xi-rope-0.3.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/lazy_static/lazy_static-1.4.0.crate",
         "sha256": "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646",
         "dest": "cargo/vendor/lazy_static-1.4.0"
@@ -3910,14 +3935,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/nix/nix-0.22.3.crate",
-        "sha256": "e4916f159ed8e5de0082076562152a76b7a1f64a01fd9d1e0fea002c37624faf",
-        "dest": "cargo/vendor/nix-0.22.3"
+        "url": "https://static.crates.io/crates/nix/nix-0.24.2.crate",
+        "sha256": "195cdbc1741b8134346d515b3a56a1c94b0912758009cfd53f99ea0f57b065fc",
+        "dest": "cargo/vendor/nix-0.24.2"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"e4916f159ed8e5de0082076562152a76b7a1f64a01fd9d1e0fea002c37624faf\", \"files\": {}}",
-        "dest": "cargo/vendor/nix-0.22.3",
+        "contents": "{\"package\": \"195cdbc1741b8134346d515b3a56a1c94b0912758009cfd53f99ea0f57b065fc\", \"files\": {}}",
+        "dest": "cargo/vendor/nix-0.24.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -4416,7 +4441,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/piet-wgpu-e5d9c4d/.\" \"cargo/vendor/piet-wgpu\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/piet-wgpu-bcc134e/.\" \"cargo/vendor/piet-wgpu\""
         ]
     },
     {
@@ -5181,14 +5206,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/serde_json/serde_json-1.0.85.crate",
-        "sha256": "e55a28e3aaef9d5ce0506d0a14dbba8054ddc7e499ef522dd8b26859ec9d4a44",
-        "dest": "cargo/vendor/serde_json-1.0.85"
+        "url": "https://static.crates.io/crates/serde_json/serde_json-1.0.87.crate",
+        "sha256": "6ce777b7b150d76b9cf60d28b55f5847135a003f7d7350c6be7a773508ce7d45",
+        "dest": "cargo/vendor/serde_json-1.0.87"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"e55a28e3aaef9d5ce0506d0a14dbba8054ddc7e499ef522dd8b26859ec9d4a44\", \"files\": {}}",
-        "dest": "cargo/vendor/serde_json-1.0.85",
+        "contents": "{\"package\": \"6ce777b7b150d76b9cf60d28b55f5847135a003f7d7350c6be7a773508ce7d45\", \"files\": {}}",
+        "dest": "cargo/vendor/serde_json-1.0.87",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -5428,14 +5453,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/smallvec/smallvec-1.9.0.crate",
-        "sha256": "2fd0db749597d91ff862fd1d55ea87f7855a744a8425a64695b6fca237d1dad1",
-        "dest": "cargo/vendor/smallvec-1.9.0"
+        "url": "https://static.crates.io/crates/smallvec/smallvec-1.10.0.crate",
+        "sha256": "a507befe795404456341dfab10cef66ead4c041f62b8b11bbb92bffe5d0953e0",
+        "dest": "cargo/vendor/smallvec-1.10.0"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"2fd0db749597d91ff862fd1d55ea87f7855a744a8425a64695b6fca237d1dad1\", \"files\": {}}",
-        "dest": "cargo/vendor/smallvec-1.9.0",
+        "contents": "{\"package\": \"a507befe795404456341dfab10cef66ead4c041f62b8b11bbb92bffe5d0953e0\", \"files\": {}}",
+        "dest": "cargo/vendor/smallvec-1.10.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -6212,6 +6237,18 @@
     {
         "type": "shell",
         "commands": [
+            "cp -r --reflink=auto \"flatpak-cargo/git/tree-sitter-erlang-a8b8b0e/.\" \"cargo/vendor/tree-sitter-erlang\""
+        ]
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": null, \"files\": {}}",
+        "dest": "cargo/vendor/tree-sitter-erlang",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "shell",
+        "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/tree-sitter-glimmer-7281cac/.\" \"cargo/vendor/tree-sitter-glimmer\""
         ]
     },
@@ -6519,6 +6556,18 @@
     {
         "type": "shell",
         "commands": [
+            "cp -r --reflink=auto \"flatpak-cargo/git/tree-sitter-sql-15dad0f/.\" \"cargo/vendor/tree-sitter-sql\""
+        ]
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": null, \"files\": {}}",
+        "dest": "cargo/vendor/tree-sitter-sql",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "shell",
+        "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/tree-sitter-svelte-52e122a/.\" \"cargo/vendor/tree-sitter-svelte\""
         ]
     },
@@ -6531,14 +6580,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/tree-sitter-swift/tree-sitter-swift-0.3.3.crate",
-        "sha256": "acc22922ec4845df1c366dfa523d1ce3fffd7dfbd47850f4370138848b7c9bc4",
-        "dest": "cargo/vendor/tree-sitter-swift-0.3.3"
+        "url": "https://static.crates.io/crates/tree-sitter-swift/tree-sitter-swift-0.3.4.crate",
+        "sha256": "7fe0df6a792c4cd3066239195b65a322066c9ebbff58686a9de3e9ad9f25b510",
+        "dest": "cargo/vendor/tree-sitter-swift-0.3.4"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"acc22922ec4845df1c366dfa523d1ce3fffd7dfbd47850f4370138848b7c9bc4\", \"files\": {}}",
-        "dest": "cargo/vendor/tree-sitter-swift-0.3.3",
+        "contents": "{\"package\": \"7fe0df6a792c4cd3066239195b65a322066c9ebbff58686a9de3e9ad9f25b510\", \"files\": {}}",
+        "dest": "cargo/vendor/tree-sitter-swift-0.3.4",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -6590,6 +6639,18 @@
         "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/tree-sitter-wgsl",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "cp -r --reflink=auto \"flatpak-cargo/git/tree-sitter-xml-422528a/.\" \"cargo/vendor/tree-sitter-xml\""
+        ]
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": null, \"files\": {}}",
+        "dest": "cargo/vendor/tree-sitter-xml",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -7877,18 +7938,6 @@
         "dest-filename": ".cargo-checksum.json"
     },
     {
-        "type": "shell",
-        "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/xi-editor-06816cc/rust/rope\" \"cargo/vendor/xi-rope\""
-        ]
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": null, \"files\": {}}",
-        "dest": "cargo/vendor/xi-rope",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
         "type": "archive",
         "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/xi-unicode/xi-unicode-0.3.0.crate",
@@ -8008,14 +8057,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/zip/zip-0.6.2.crate",
-        "sha256": "bf225bcf73bb52cbb496e70475c7bd7a3f769df699c0020f6c7bd9a96dcf0b8d",
-        "dest": "cargo/vendor/zip-0.6.2"
+        "url": "https://static.crates.io/crates/zip/zip-0.6.3.crate",
+        "sha256": "537ce7411d25e54e8ae21a7ce0b15840e7bfcff15b51d697ec3266cc76bdf080",
+        "dest": "cargo/vendor/zip-0.6.3"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"bf225bcf73bb52cbb496e70475c7bd7a3f769df699c0020f6c7bd9a96dcf0b8d\", \"files\": {}}",
-        "dest": "cargo/vendor/zip-0.6.2",
+        "contents": "{\"package\": \"537ce7411d25e54e8ae21a7ce0b15840e7bfcff15b51d697ec3266cc76bdf080\", \"files\": {}}",
+        "dest": "cargo/vendor/zip-0.6.3",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -8059,7 +8108,7 @@
     },
     {
         "type": "inline",
-        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/lapce/druid\"]\ngit = \"https://github.com/lapce/druid\"\nreplace-with = \"vendored-sources\"\nbranch = \"shell_opengl\"\n\n[source.\"https://github.com/lapce/font-kit\"]\ngit = \"https://github.com/lapce/font-kit\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/lapce/fount\"]\ngit = \"https://github.com/lapce/fount\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/lapce/parley\"]\ngit = \"https://github.com/lapce/parley\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/lapce/piet-wgpu\"]\ngit = \"https://github.com/lapce/piet-wgpu\"\nreplace-with = \"vendored-sources\"\nbranch = \"shell_opengl\"\n\n[source.\"https://github.com/lapce/psp-types\"]\ngit = \"https://github.com/lapce/psp-types\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/lapce/structdesc\"]\ngit = \"https://github.com/lapce/structdesc\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/lapce/swash\"]\ngit = \"https://github.com/lapce/swash\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/syntacti/tree-sitter-bash\"]\ngit = \"https://github.com/syntacti/tree-sitter-bash\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/tree-sitter/tree-sitter-c-sharp\"]\ngit = \"https://github.com/tree-sitter/tree-sitter-c-sharp\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/syntacti/tree-sitter-css\"]\ngit = \"https://github.com/syntacti/tree-sitter-css\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/syntacti/tree-sitter-d\"]\ngit = \"https://github.com/syntacti/tree-sitter-d\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/syntacti/tree-sitter-dart\"]\ngit = \"https://github.com/syntacti/tree-sitter-dart\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/panekj/tree-sitter-dockerfile\"]\ngit = \"https://github.com/panekj/tree-sitter-dockerfile\"\nreplace-with = \"vendored-sources\"\nbranch = \"queries\"\n\n[source.\"https://github.com/elixir-lang/tree-sitter-elixir\"]\ngit = \"https://github.com/elixir-lang/tree-sitter-elixir\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/vixietsq/tree-sitter-glimmer\"]\ngit = \"https://github.com/vixietsq/tree-sitter-glimmer\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/tree-sitter/tree-sitter-haskell\"]\ngit = \"https://github.com/tree-sitter/tree-sitter-haskell\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/vantreeseba/tree-sitter-haxe\"]\ngit = \"https://github.com/vantreeseba/tree-sitter-haxe\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/vixietsq/tree-sitter-hcl\"]\ngit = \"https://github.com/vixietsq/tree-sitter-hcl\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/tree-sitter/tree-sitter-java\"]\ngit = \"https://github.com/tree-sitter/tree-sitter-java\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/tree-sitter/tree-sitter-json\"]\ngit = \"https://github.com/tree-sitter/tree-sitter-json\"\nreplace-with = \"vendored-sources\"\nrev = \"11e2cc12d9b267766fb11a06e52952792fd8e3f0\"\n\n[source.\"https://github.com/varlad/tree-sitter-julia\"]\ngit = \"https://github.com/varlad/tree-sitter-julia\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/fwcd/tree-sitter-kotlin\"]\ngit = \"https://github.com/fwcd/tree-sitter-kotlin\"\nreplace-with = \"vendored-sources\"\nbranch = \"main\"\n\n[source.\"https://github.com/latex-lsp/tree-sitter-latex\"]\ngit = \"https://github.com/latex-lsp/tree-sitter-latex\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/syntacti/tree-sitter-lua\"]\ngit = \"https://github.com/syntacti/tree-sitter-lua\"\nreplace-with = \"vendored-sources\"\nbranch = \"main\"\n\n[source.\"https://github.com/mdeiml/tree-sitter-markdown\"]\ngit = \"https://github.com/mdeiml/tree-sitter-markdown\"\nreplace-with = \"vendored-sources\"\nbranch = \"split_parser\"\n\n[source.\"https://github.com/panekj/tree-sitter-nix\"]\ngit = \"https://github.com/panekj/tree-sitter-nix\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/tree-sitter/tree-sitter-ocaml\"]\ngit = \"https://github.com/tree-sitter/tree-sitter-ocaml\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/tree-sitter/tree-sitter-php\"]\ngit = \"https://github.com/tree-sitter/tree-sitter-php\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/tree-sitter/tree-sitter-ql\"]\ngit = \"https://github.com/tree-sitter/tree-sitter-ql\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/tree-sitter/tree-sitter-ruby\"]\ngit = \"https://github.com/tree-sitter/tree-sitter-ruby\"\nreplace-with = \"vendored-sources\"\nrev = \"656abef\"\n\n[source.\"https://github.com/6cdh/tree-sitter-scheme\"]\ngit = \"https://github.com/6cdh/tree-sitter-scheme\"\nreplace-with = \"vendored-sources\"\nbranch = \"main\"\n\n[source.\"https://github.com/vixietsq/tree-sitter-scss\"]\ngit = \"https://github.com/vixietsq/tree-sitter-scss\"\nreplace-with = \"vendored-sources\"\nbranch = \"patch-1\"\n\n[source.\"https://github.com/himujjal/tree-sitter-svelte\"]\ngit = \"https://github.com/himujjal/tree-sitter-svelte\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/szebniok/tree-sitter-wgsl\"]\ngit = \"https://github.com/szebniok/tree-sitter-wgsl\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/panekj/tree-sitter-yaml\"]\ngit = \"https://github.com/panekj/tree-sitter-yaml\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/maxxnino/tree-sitter-zig\"]\ngit = \"https://github.com/maxxnino/tree-sitter-zig\"\nreplace-with = \"vendored-sources\"\nbranch = \"main\"\n\n[source.\"https://github.com/lapce/wasi-experimental-http\"]\ngit = \"https://github.com/lapce/wasi-experimental-http\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/lapce/xi-editor\"]\ngit = \"https://github.com/lapce/xi-editor\"\nreplace-with = \"vendored-sources\"\n",
+        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/lapce/druid\"]\ngit = \"https://github.com/lapce/druid\"\nreplace-with = \"vendored-sources\"\nbranch = \"shell_opengl\"\n\n[source.\"https://github.com/lapce/font-kit\"]\ngit = \"https://github.com/lapce/font-kit\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/lapce/fount\"]\ngit = \"https://github.com/lapce/fount\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/lapce/parley\"]\ngit = \"https://github.com/lapce/parley\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/lapce/piet-wgpu\"]\ngit = \"https://github.com/lapce/piet-wgpu\"\nreplace-with = \"vendored-sources\"\nbranch = \"shell_opengl\"\n\n[source.\"https://github.com/lapce/psp-types\"]\ngit = \"https://github.com/lapce/psp-types\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/lapce/structdesc\"]\ngit = \"https://github.com/lapce/structdesc\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/lapce/swash\"]\ngit = \"https://github.com/lapce/swash\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/syntacti/tree-sitter-bash\"]\ngit = \"https://github.com/syntacti/tree-sitter-bash\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/tree-sitter/tree-sitter-c-sharp\"]\ngit = \"https://github.com/tree-sitter/tree-sitter-c-sharp\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/syntacti/tree-sitter-css\"]\ngit = \"https://github.com/syntacti/tree-sitter-css\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/syntacti/tree-sitter-d\"]\ngit = \"https://github.com/syntacti/tree-sitter-d\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/syntacti/tree-sitter-dart\"]\ngit = \"https://github.com/syntacti/tree-sitter-dart\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/panekj/tree-sitter-dockerfile\"]\ngit = \"https://github.com/panekj/tree-sitter-dockerfile\"\nreplace-with = \"vendored-sources\"\nbranch = \"queries\"\n\n[source.\"https://github.com/elixir-lang/tree-sitter-elixir\"]\ngit = \"https://github.com/elixir-lang/tree-sitter-elixir\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/whatsapp/tree-sitter-erlang\"]\ngit = \"https://github.com/whatsapp/tree-sitter-erlang\"\nreplace-with = \"vendored-sources\"\nbranch = \"main\"\n\n[source.\"https://github.com/vixietsq/tree-sitter-glimmer\"]\ngit = \"https://github.com/vixietsq/tree-sitter-glimmer\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/tree-sitter/tree-sitter-haskell\"]\ngit = \"https://github.com/tree-sitter/tree-sitter-haskell\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/vantreeseba/tree-sitter-haxe\"]\ngit = \"https://github.com/vantreeseba/tree-sitter-haxe\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/vixietsq/tree-sitter-hcl\"]\ngit = \"https://github.com/vixietsq/tree-sitter-hcl\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/tree-sitter/tree-sitter-java\"]\ngit = \"https://github.com/tree-sitter/tree-sitter-java\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/tree-sitter/tree-sitter-json\"]\ngit = \"https://github.com/tree-sitter/tree-sitter-json\"\nreplace-with = \"vendored-sources\"\nrev = \"11e2cc12d9b267766fb11a06e52952792fd8e3f0\"\n\n[source.\"https://github.com/varlad/tree-sitter-julia\"]\ngit = \"https://github.com/varlad/tree-sitter-julia\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/fwcd/tree-sitter-kotlin\"]\ngit = \"https://github.com/fwcd/tree-sitter-kotlin\"\nreplace-with = \"vendored-sources\"\nbranch = \"main\"\n\n[source.\"https://github.com/latex-lsp/tree-sitter-latex\"]\ngit = \"https://github.com/latex-lsp/tree-sitter-latex\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/syntacti/tree-sitter-lua\"]\ngit = \"https://github.com/syntacti/tree-sitter-lua\"\nreplace-with = \"vendored-sources\"\nbranch = \"main\"\n\n[source.\"https://github.com/mdeiml/tree-sitter-markdown\"]\ngit = \"https://github.com/mdeiml/tree-sitter-markdown\"\nreplace-with = \"vendored-sources\"\nbranch = \"split_parser\"\n\n[source.\"https://github.com/panekj/tree-sitter-nix\"]\ngit = \"https://github.com/panekj/tree-sitter-nix\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/tree-sitter/tree-sitter-ocaml\"]\ngit = \"https://github.com/tree-sitter/tree-sitter-ocaml\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/tree-sitter/tree-sitter-php\"]\ngit = \"https://github.com/tree-sitter/tree-sitter-php\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/tree-sitter/tree-sitter-ql\"]\ngit = \"https://github.com/tree-sitter/tree-sitter-ql\"\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/tree-sitter/tree-sitter-ruby\"]\ngit = \"https://github.com/tree-sitter/tree-sitter-ruby\"\nreplace-with = \"vendored-sources\"\nrev = \"656abef\"\n\n[source.\"https://github.com/6cdh/tree-sitter-scheme\"]\ngit = \"https://github.com/6cdh/tree-sitter-scheme\"\nreplace-with = \"vendored-sources\"\nbranch = \"main\"\n\n[source.\"https://github.com/vixietsq/tree-sitter-scss\"]\ngit = \"https://github.com/vixietsq/tree-sitter-scss\"\nreplace-with = \"vendored-sources\"\nbranch = \"patch-1\"\n\n[source.\"https://github.com/oknozor/tree-sitter-sql\"]\ngit = \"https://github.com/oknozor/tree-sitter-sql\"\nreplace-with = \"vendored-sources\"\nbranch = \"main\"\n\n[source.\"https://github.com/himujjal/tree-sitter-svelte\"]\ngit = \"https://github.com/himujjal/tree-sitter-svelte\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/szebniok/tree-sitter-wgsl\"]\ngit = \"https://github.com/szebniok/tree-sitter-wgsl\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/renjisann/tree-sitter-xml\"]\ngit = \"https://github.com/renjisann/tree-sitter-xml\"\nreplace-with = \"vendored-sources\"\nbranch = \"main\"\n\n[source.\"https://github.com/panekj/tree-sitter-yaml\"]\ngit = \"https://github.com/panekj/tree-sitter-yaml\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/maxxnino/tree-sitter-zig\"]\ngit = \"https://github.com/maxxnino/tree-sitter-zig\"\nreplace-with = \"vendored-sources\"\nbranch = \"main\"\n\n[source.\"https://github.com/lapce/wasi-experimental-http\"]\ngit = \"https://github.com/lapce/wasi-experimental-http\"\nreplace-with = \"vendored-sources\"\n",
         "dest": "cargo",
         "dest-filename": "config"
     }
