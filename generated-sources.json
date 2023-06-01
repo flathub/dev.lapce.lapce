@@ -1629,6 +1629,12 @@
     },
     {
         "type": "inline",
+        "contents": "[[example]]\nname = \"cursor\"\nrequired-features = [ \"image\", \"png\",]\n\n[[example]]\nname = \"image\"\nrequired-features = [ \"image\", \"png\",]\n\n[[example]]\nname = \"invalidation\"\nrequired-features = [ \"im\",]\n\n[[example]]\nname = \"list\"\nrequired-features = [ \"im\",]\n\n[[example]]\nname = \"svg\"\nrequired-features = [ \"svg\",]\n\n[[example]]\nname = \"tabs\"\nrequired-features = [ \"im\",]\n\n[[example]]\nname = \"widget_gallery\"\nrequired-features = [ \"svg\", \"im\", \"image\", \"png\",]\n\n[package]\nname = \"druid\"\nversion = \"0.7.0\"\nlicense = \"Apache-2.0\"\nauthors = [ \"Raph Levien <raph.levien@gmail.com>\",]\ndescription = \"Data-oriented Rust UI design toolkit.\"\nrepository = \"https://github.com/linebender/druid\"\ncategories = [ \"gui\",]\nreadme = \"README.md\"\nkeywords = [ \"gui\", \"ui\", \"toolkit\",]\nedition = \"2018\"\n\n[features]\ndefault = [ \"gtk\",]\ngtk = [ \"druid-shell/gtk\",]\nimage = [ \"druid-shell/image\",]\nsvg = [ \"usvg\",]\nx11 = [ \"druid-shell/x11\",]\nwayland = [ \"druid-shell/wayland\",]\ncrochet = []\nserde = [ \"im/serde\", \"druid-shell/serde\",]\nraw-win-handle = [ \"druid-shell/raw-win-handle\",]\npng = [ \"druid-shell/image_png\",]\njpeg = [ \"druid-shell/jpeg\",]\njpeg_rayon = [ \"druid-shell/jpeg_rayon\",]\ngif = [ \"druid-shell/gif\",]\nbmp = [ \"druid-shell/bmp\",]\nico = [ \"druid-shell/ico\",]\ntiff = [ \"druid-shell/tiff\",]\nwebp = [ \"druid-shell/webp\",]\npnm = [ \"druid-shell/pnm\",]\ndds = [ \"druid-shell/dds\",]\ntga = [ \"druid-shell/tga\",]\nfarbfeld = [ \"druid-shell/farbfeld\",]\ndxt = [ \"druid-shell/dxt\",]\nhdr = [ \"druid-shell/hdr\",]\nimage-all = [ \"image\", \"svg\", \"png\", \"jpeg\", \"jpeg_rayon\", \"gif\", \"bmp\", \"ico\", \"tiff\", \"webp\", \"pnm\", \"dds\", \"tga\", \"farbfeld\", \"dxt\", \"hdr\",]\n\n[dependencies]\nfluent-bundle = \"0.15.1\"\nfluent-langneg = \"0.13.0\"\nfluent-syntax = \"0.11.0\"\nunic-langid = \"0.9.0\"\nunicode-segmentation = \"1.6.0\"\nxi-unicode = \"0.3.0\"\nfnv = \"1.0.7\"\n\n[dev-dependencies]\ntempfile = \"=3.1.0\"\n\n[dependencies.druid-shell]\nversion = \"0.7.0\"\ndefault-features = false\npath = \"../druid-shell\"\n\n[dependencies.druid-derive]\nversion = \"0.4.0\"\npath = \"../druid-derive\"\n\n[dependencies.tracing]\nversion = \"0.1.22\"\n\n[dependencies.tracing-subscriber]\nversion = \"0.3.2\"\nfeatures = [ \"fmt\", \"ansi\",]\ndefault-features = false\n\n[dependencies.instant]\nversion = \"0.1.6\"\nfeatures = [ \"wasm-bindgen\",]\n\n[dependencies.chrono]\nversion = \"0.4.19\"\noptional = true\n\n[dependencies.im]\nversion = \"15.0.0\"\noptional = true\n\n[dependencies.usvg]\nversion = \"0.14.1\"\noptional = true\n\n[dev-dependencies.float-cmp]\nversion = \"0.8.0\"\nfeatures = [ \"std\",]\ndefault-features = false\n\n[dev-dependencies.piet-common]\nversion = \"=0.5.0\"\nfeatures = [ \"png\",]\n\n[dev-dependencies.pulldown-cmark]\nversion = \"0.8\"\ndefault-features = false\n\n[dev-dependencies.test-log]\nversion = \"0.2.5\"\nfeatures = [ \"trace\",]\ndefault-features = false\n\n[dev-dependencies.tracing-subscriber]\nversion = \"0.3.2\"\nfeatures = [ \"env-filter\",]\n\n[target.\"cfg(not(target_arch=\\\"wasm32\\\"))\".dev-dependencies]\nopen = \"1.6\"\n\n[package.metadata.docs.rs]\nfeatures = [ \"im\",]\nrustdoc-args = [ \"--cfg\", \"docsrs\",]\ndefault-target = \"x86_64-pc-windows-msvc\"\ncargo-args = [ \"-Zunstable-options\", \"-Zrustdoc-scrape-examples=examples\",]\n\n[target.\"cfg(target_arch=\\\"wasm32\\\")\".dependencies.tracing-wasm]\nversion = \"0.2.0\"\n\n[target.\"cfg(target_arch=\\\"wasm32\\\")\".dependencies.console_error_panic_hook]\nversion = \"0.1.6\"\n",
+        "dest": "cargo/vendor/druid",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/druid",
         "dest-filename": ".cargo-checksum.json"
@@ -1641,6 +1647,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"druid-derive\"\nversion = \"0.4.0\"\nlicense = \"Apache-2.0\"\nauthors = [ \"Druid authors\",]\ndescription = \"derive impls for druid, a Rust UI toolkit.\"\nrepository = \"https://github.com/linebender/druid\"\nedition = \"2018\"\n\n[lib]\nproc-macro = true\n\n[dependencies]\nsyn = \"1.0.39\"\nquote = \"1.0.7\"\nproc-macro2 = \"1.0.19\"\n\n[dev-dependencies]\ntrybuild = \"1.0\"\n\n[dev-dependencies.druid]\nversion = \"0.7.0\"\npath = \"../druid\"\n\n[dev-dependencies.float-cmp]\nversion = \"0.8.0\"\nfeatures = [ \"std\",]\ndefault-features = false\n\n[package.metadata.docs.rs]\nrustdoc-args = [ \"--cfg\", \"docsrs\",]\ndefault-target = \"x86_64-pc-windows-msvc\"\n",
+        "dest": "cargo/vendor/druid-derive",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/druid-derive",
         "dest-filename": ".cargo-checksum.json"
@@ -1650,6 +1662,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/druid-0b9c00f/druid-shell\" \"cargo/vendor/druid-shell\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"druid-shell\"\nversion = \"0.7.0\"\nlicense = \"Apache-2.0\"\nauthors = [ \"Raph Levien <raph.levien@gmail.com>\",]\ndescription = \"Platform abstracting application shell used for druid toolkit.\"\nrepository = \"https://github.com/linebender/druid\"\nreadme = \"README.md\"\ncategories = [ \"os::macos-apis\", \"os::windows-apis\", \"gui\",]\nedition = \"2018\"\n\n[features]\ndefault = [ \"gtk\",]\ngtk = [ \"gdk-sys\", \"glib-sys\", \"gtk-sys\", \"gtk-rs\", \"gdk-pixbuf\",]\nx11 = [ \"ashpd\", \"bindgen\", \"cairo-sys-rs\", \"futures\", \"nix\", \"pkg-config\", \"x11rb\",]\nwayland = [ \"wayland-client\", \"wayland-protocols/client\", \"wayland-protocols/unstable_protocols\", \"nix\", \"cairo-sys-rs\", \"rand\", \"calloop\", \"wayland-cursor\", \"log\", \"im\", \"bindgen\", \"pkg-config\",]\nraw-win-handle = [ \"raw-window-handle\",]\nimage_png = [ \"piet-common/image_png\",]\njpeg = [ \"piet-common/jpeg\",]\njpeg_rayon = [ \"piet-common/jpeg_rayon\",]\ngif = [ \"piet-common/gif\",]\nbmp = [ \"piet-common/bmp\",]\nico = [ \"piet-common/ico\",]\ntiff = [ \"piet-common/tiff\",]\nwebp = [ \"piet-common/webp\",]\npnm = [ \"piet-common/pnm\",]\ndds = [ \"piet-common/dds\",]\ntga = [ \"piet-common/tga\",]\nfarbfeld = [ \"piet-common/farbfeld\",]\ndxt = [ \"piet-common/dxt\",]\nhdr = [ \"piet-common/hdr\",]\nserde = [ \"kurbo/serde\",]\n\n[dependencies]\nkurbo = \"0.8.2\"\ntracing = \"0.1.22\"\nlazy_static = \"1.4.0\"\ntime = \"0.3.0\"\ncfg-if = \"1.0.0\"\nanyhow = \"1.0.32\"\n\n[dev-dependencies]\nstatic_assertions = \"1.1.0\"\nunicode-segmentation = \"1.7.0\"\n\n[dependencies.piet-wgpu]\ngit = \"https://github.com/lapce/piet-wgpu\"\nbranch = \"shell_opengl\"\n\n[dependencies.instant]\nversion = \"0.1.6\"\nfeatures = [ \"wasm-bindgen\",]\n\n[dependencies.keyboard-types]\nversion = \"0.6.2\"\ndefault_features = false\n\n[dependencies.image]\nversion = \"0.23.12\"\noptional = true\ndefault_features = false\n\n[dependencies.raw-window-handle]\nversion = \"0.4.2\"\noptional = true\ndefault_features = false\n\n[dev-dependencies.piet-common]\nversion = \"=0.5.0\"\nfeatures = [ \"png\",]\n\n[dev-dependencies.test-log]\nversion = \"0.2.5\"\nfeatures = [ \"trace\",]\ndefault-features = false\n\n[dev-dependencies.tracing-subscriber]\nversion = \"0.3.2\"\nfeatures = [ \"env-filter\",]\n\n[build-dependencies.bindgen]\nversion = \"0.58\"\noptional = true\n\n[build-dependencies.pkg-config]\nversion = \"0.3\"\noptional = true\n\n[target.\"cfg(target_os=\\\"windows\\\")\".dependencies]\nscopeguard = \"1.1.0\"\nwio = \"0.2.2\"\nglutin_wgl_sys = \"0.1.5\"\n\n[target.\"cfg(target_os=\\\"macos\\\")\".dependencies]\nblock = \"0.1.6\"\ncocoa = \"0.24.0\"\nobjc = \"0.2.7\"\ncore-graphics = \"0.22.0\"\ncore-foundation = \"0.9\"\nforeign-types = \"0.3.2\"\nbitflags = \"1.2.1\"\ncgl = \"0.3\"\n\n[target.\"cfg(any(target_os=\\\"linux\\\", target_os=\\\"openbsd\\\"))\".dependencies]\ngl_loader = \"0.1.2\"\n\n[target.\"cfg(target_arch=\\\"wasm32\\\")\".dependencies]\nwasm-bindgen = \"0.2.67\"\njs-sys = \"0.3.44\"\n\n[package.metadata.docs.rs]\nrustdoc-args = [ \"--cfg\", \"docsrs\",]\ndefault-target = \"x86_64-pc-windows-msvc\"\n\n[target.\"cfg(target_os=\\\"windows\\\")\".dependencies.winapi]\nversion = \"0.3.9\"\nfeatures = [ \"d2d1_1\", \"dwrite\", \"winbase\", \"libloaderapi\", \"errhandlingapi\", \"winuser\", \"shellscalingapi\", \"shobjidl\", \"combaseapi\", \"synchapi\", \"dxgi1_3\", \"dcomp\", \"d3d11\", \"dwmapi\", \"wincon\", \"fileapi\", \"processenv\", \"winbase\", \"handleapi\", \"shellapi\", \"winnls\",]\n\n[target.\"cfg(any(target_os=\\\"linux\\\", target_os=\\\"openbsd\\\"))\".dependencies.ashpd]\nversion = \"0.3.0\"\noptional = true\n\n[target.\"cfg(any(target_os=\\\"linux\\\", target_os=\\\"openbsd\\\"))\".dependencies.cairo-rs]\nversion = \"0.14.0\"\ndefault_features = false\nfeatures = [ \"xcb\",]\n\n[target.\"cfg(any(target_os=\\\"linux\\\", target_os=\\\"openbsd\\\"))\".dependencies.cairo-sys-rs]\nversion = \"0.14.0\"\ndefault_features = false\noptional = true\n\n[target.\"cfg(any(target_os=\\\"linux\\\", target_os=\\\"openbsd\\\"))\".dependencies.futures]\nversion = \"0.3.21\"\noptional = true\nfeatures = [ \"executor\",]\n\n[target.\"cfg(any(target_os=\\\"linux\\\", target_os=\\\"openbsd\\\"))\".dependencies.gdk-sys]\nversion = \"0.14.0\"\noptional = true\n\n[target.\"cfg(any(target_os=\\\"linux\\\", target_os=\\\"openbsd\\\"))\".dependencies.gdk-pixbuf]\nversion = \"0.14.0\"\nfeatures = [ \"v2_36_8\",]\noptional = true\n\n[target.\"cfg(any(target_os=\\\"linux\\\", target_os=\\\"openbsd\\\"))\".dependencies.gtk-rs]\nversion = \"0.14.0\"\nfeatures = [ \"v3_22\",]\npackage = \"gtk\"\noptional = true\n\n[target.\"cfg(any(target_os=\\\"linux\\\", target_os=\\\"openbsd\\\"))\".dependencies.glib-sys]\nversion = \"0.14.0\"\noptional = true\n\n[target.\"cfg(any(target_os=\\\"linux\\\", target_os=\\\"openbsd\\\"))\".dependencies.gtk-sys]\nversion = \"0.14.0\"\noptional = true\n\n[target.\"cfg(any(target_os=\\\"linux\\\", target_os=\\\"openbsd\\\"))\".dependencies.nix]\nversion = \"0.18.0\"\noptional = true\n\n[target.\"cfg(any(target_os=\\\"linux\\\", target_os=\\\"openbsd\\\"))\".dependencies.x11rb]\nversion = \"0.8.0\"\nfeatures = [ \"allow-unsafe-code\", \"present\", \"render\", \"randr\", \"xfixes\", \"xkb\", \"resource_manager\", \"cursor\",]\noptional = true\n\n[target.\"cfg(any(target_os=\\\"linux\\\", target_os=\\\"openbsd\\\"))\".dependencies.wayland-client]\nversion = \"0.29\"\noptional = true\n\n[target.\"cfg(any(target_os=\\\"linux\\\", target_os=\\\"openbsd\\\"))\".dependencies.wayland-protocols]\nversion = \"0.29\"\noptional = true\n\n[target.\"cfg(any(target_os=\\\"linux\\\", target_os=\\\"openbsd\\\"))\".dependencies.wayland-cursor]\nversion = \"0.29\"\noptional = true\n\n[target.\"cfg(any(target_os=\\\"linux\\\", target_os=\\\"openbsd\\\"))\".dependencies.rand]\nversion = \"0.8.0\"\noptional = true\n\n[target.\"cfg(any(target_os=\\\"linux\\\", target_os=\\\"openbsd\\\"))\".dependencies.calloop]\nversion = \"0.7.1\"\noptional = true\n\n[target.\"cfg(any(target_os=\\\"linux\\\", target_os=\\\"openbsd\\\"))\".dependencies.log]\nversion = \"0.4.14\"\noptional = true\n\n[target.\"cfg(any(target_os=\\\"linux\\\", target_os=\\\"openbsd\\\"))\".dependencies.im]\nversion = \"15.0.0\"\noptional = true\n\n[target.\"cfg(target_arch=\\\"wasm32\\\")\".dependencies.web-sys]\nversion = \"0.3.44\"\nfeatures = [ \"Window\", \"MouseEvent\", \"CssStyleDeclaration\", \"WheelEvent\", \"KeyEvent\", \"KeyboardEvent\", \"Navigator\",]\n",
+        "dest": "cargo/vendor/druid-shell",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
@@ -2029,6 +2047,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"font-kit\"\nversion = \"0.11.0\"\nauthors = [ \"Patrick Walton <pcwalton@mimiga.net>\",]\ndescription = \"A cross-platform font loading library\"\nlicense = \"MIT/Apache-2.0\"\nreadme = \"README.md\"\nrepository = \"https://github.com/servo/font-kit\"\nhomepage = \"https://github.com/servo/font-kit\"\nexclude = [ \"resources/**\",]\nedition = \"2018\"\n\n[features]\ndefault = [ \"source\",]\nloader-freetype = [ \"freetype\",]\nloader-freetype-default = [ \"loader-freetype\",]\nsource-fontconfig = [ \"yeslogic-fontconfig-sys\",]\nsource-fontconfig-dlopen = [ \"yeslogic-fontconfig-sys/dlopen\",]\nsource-fontconfig-default = [ \"source-fontconfig\",]\nsource = []\n\n[dependencies]\nbitflags = \"1\"\nbyteorder = \"1.2\"\nfloat-ord = \"0.2\"\nlazy_static = \"1.1\"\nlibc = \"0.2\"\nlog = \"0.4.4\"\npathfinder_geometry = \"0.5\"\npathfinder_simd = \"0.5.1\"\n\n[dev-dependencies]\nclap = \"2.32\"\ncolored = \"1.6\"\npbr = \"1.0\"\nprettytable-rs = \"0.8\"\n\n[dependencies.freetype]\nversion = \"0.7\"\noptional = true\n\n[dependencies.yeslogic-fontconfig-sys]\nversion = \"3.0.0\"\noptional = true\n\n[target.\"cfg(any(target_os = \\\"macos\\\", target_os = \\\"ios\\\"))\".dependencies]\ncore-foundation = \"0.9\"\ncore-graphics = \"0.22\"\ncore-text = \"19.1.0\"\n\n[target.\"cfg(not(any(target_family = \\\"windows\\\", target_os = \\\"macos\\\", target_os = \\\"ios\\\")))\".dependencies]\nfreetype = \"0.7\"\n\n[target.\"cfg(not(any(target_family = \\\"windows\\\", target_os = \\\"macos\\\", target_os = \\\"ios\\\", target_arch = \\\"wasm32\\\")))\".dependencies]\nyeslogic-fontconfig-sys = \"3.0.0\"\n\n[target.\"cfg(not(any(target_arch = \\\"wasm32\\\", target_family = \\\"windows\\\", target_os = \\\"android\\\")))\".dependencies]\ndirs-next = \"2.0\"\n\n[target.\"cfg(not(target_arch = \\\"wasm32\\\"))\".dependencies]\nwalkdir = \"2.1\"\n\n[target.\"cfg(target_family = \\\"windows\\\")\".dependencies.dwrote]\nversion = \"0.11\"\ndefault-features = false\n\n[target.\"cfg(target_family = \\\"windows\\\")\".dependencies.winapi]\nversion = \"0.3\"\nfeatures = [ \"dwrite\", \"minwindef\", \"sysinfoapi\", \"winbase\", \"winnt\",]\n",
+        "dest": "cargo/vendor/font-kit",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/font-kit",
         "dest-filename": ".cargo-checksum.json"
@@ -2116,6 +2140,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/fount-3bfdc68/.\" \"cargo/vendor/fount\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"fount\"\nversion = \"0.1.0\"\nauthors = [ \"Chad Brokaw <cbrokaw@gmail.com>\",]\nlicense = \"MIT OR Apache-2.0\"\nedition = \"2018\"\n\n[dependencies]\nmemmap2 = \"0.5.3\"\n\n[dependencies.swash]\ngit = \"https://github.com/lapce/swash\"\n\n[dependencies.font-kit]\ngit = \"https://github.com/lapce/font-kit\"\n",
+        "dest": "cargo/vendor/fount",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
@@ -2921,6 +2951,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/human-sort-1e74db1/.\" \"cargo/vendor/human-sort\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"human-sort\"\nversion = \"0.2.2\"\nauthors = [ \"Vlad Nagikh <paradakh@protonmail.com>\",]\nlicense = \"MIT\"\nrepository = \"https://github.com/paradakh/human-sort\"\ndescription = \"Human sort (natural sort) implementation\"\nkeywords = [ \"sort\", \"natural\", \"human\", \"order\",]\nreadme = \"README.md\"\nedition = \"2018\"\ncategories = [ \"algorithms\",]\n\n[dependencies]\n\n[badges.travis-ci]\nrepository = \"paradakh/human-sort\"\nbranch = \"master\"\n",
+        "dest": "cargo/vendor/human-sort",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
@@ -4379,6 +4415,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"parley\"\nversion = \"0.1.0\"\nauthors = [ \"Chad Brokaw <cbrokaw@gmail.com>\",]\nlicense = \"MIT OR Apache-2.0\"\nedition = \"2018\"\n\n[workspace]\nmembers = [ \"piet-parley\",]\n\n[dependencies.swash]\ngit = \"https://github.com/lapce/swash\"\n\n[dependencies.fount]\ngit = \"https://github.com/lapce/fount\"\n",
+        "dest": "cargo/vendor/parley",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/parley",
         "dest-filename": ".cargo-checksum.json"
@@ -4505,6 +4547,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/piet-wgpu-2024fe8/.\" \"cargo/vendor/piet-wgpu\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"piet-wgpu\"\nversion = \"0.1.0\"\nedition = \"2018\"\nresolver = \"2\"\n\n[dependencies]\nimage = \"0.24.3\"\nlog = \"0.4.14\"\nhashbrown = \"0.11.2\"\nunicode-width = \"0.1.8\"\ninclude_dir = \"0.6.0\"\nsha2 = \"0.9.8\"\ntiny-skia = \"0.6.3\"\nresvg = \"0.22.0\"\nusvg = \"0.22.0\"\nlinked-hash-map = \"0.5.4\"\npathfinder_geometry = \"0.5.1\"\nlyon = \"0.17.5\"\npiet = \"0.4.0\"\nglow = \"0.11.2\"\nglam = \"0.10\"\n\n[dependencies.swash]\ngit = \"https://github.com/lapce/swash\"\n\n[dependencies.parley]\ngit = \"https://github.com/lapce/parley\"\n\n[dependencies.bytemuck]\nversion = \"1.7.2\"\nfeatures = [ \"derive\",]\n",
+        "dest": "cargo/vendor/piet-wgpu",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
@@ -4699,6 +4747,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/psp-types-b55d2c5/.\" \"cargo/vendor/psp-types\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"psp-types\"\nversion = \"0.1.0\"\nlicense = \"Apache-2.0\"\ndescription = \"Types for interaction with plugin server protocol\"\nedition = \"2021\"\n\n[dependencies]\nserde_json = \"1.0.59\"\n\n[dependencies.serde]\nversion = \"1.0\"\nfeatures = [ \"derive\",]\n\n[dependencies.lsp-types]\nversion = \"0.93\"\nfeatures = [ \"proposed\",]\n",
+        "dest": "cargo/vendor/psp-types",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
@@ -5598,6 +5652,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"structdesc\"\nversion = \"0.1.0\"\nedition = \"2021\"\n\n[dependencies]\ndarling = \"0.13.1\"\nproc-macro2 = \"1\"\nquote = \"1.0.14\"\n\n[lib]\nproc-macro = true\n\n[dependencies.syn]\nversion = \"1.0.84\"\nfeatures = [ \"full\",]\n",
+        "dest": "cargo/vendor/structdesc",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/structdesc",
         "dest-filename": ".cargo-checksum.json"
@@ -5672,6 +5732,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/swash-1d9b8c7/.\" \"cargo/vendor/swash\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"swash\"\nversion = \"0.1.4\"\nauthors = [ \"Chad Brokaw <cbrokaw@gmail.com>\",]\nedition = \"2018\"\ndescription = \"Font introspection, complex text shaping and glyph rendering.\"\nlicense = \"MIT OR Apache-2.0\"\nkeywords = [ \"font\", \"shape\", \"glyph\", \"text\",]\ncategories = [ \"graphics\", \"text-processing\",]\nrepository = \"https://github.com/dfrg/swash\"\nhomepage = \"https://github.com/dfrg/swash\"\nreadme = \"README.md\"\n\n[features]\ndefault = [ \"scale\", \"render\",]\nscale = [ \"yazi\", \"zeno\",]\nrender = [ \"scale\", \"zeno/eval\",]\n\n[dependencies.yazi]\nversion = \"0.1.4\"\noptional = true\n\n[dependencies.zeno]\nversion = \"0.2.2\"\noptional = true\ndefault_features = false\n",
+        "dest": "cargo/vendor/swash",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
@@ -6142,6 +6208,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-bash\"\ndescription = \"bash grammar for the tree-sitter parsing library\"\nversion = \"0.19.0\"\nkeywords = [ \"incremental\", \"parsing\", \"bash\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/tree-sitter/tree-sitter-bash\"\nedition = \"2018\"\nlicense = \"MIT\"\nauthors = [ \"Max Brunsfeld <maxbrunsfeld@gmail.com\",]\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \">= 0.19, < 0.21\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-bash",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/tree-sitter-bash",
         "dest-filename": ".cargo-checksum.json"
@@ -6167,6 +6239,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-c-sharp\"\ndescription = \"C# grammar for the tree-sitter parsing library\"\nversion = \"0.20.0\"\nauthors = [ \"Damien Guard <damieng@gmail.com>\", \"Max Brunsfeld <maxbrunsfeld@gmail.com>\", \"Martin Midtgaard <martin.midtgaard@gmail.com>\", \"Sjoerd Langkemper <sjoerd-github@linuxonly.nl>\", \"Patrick Thomson <patrickt@github.com>\", \"Noelle Caldwell <noelle.caldwell@microsoft.com>\", \"Douglas Creager <dcreager@dcreager.net>\",]\nlicense = \"MIT\"\nreadme = \"bindings/rust/README.md\"\nkeywords = [ \"incremental\", \"parsing\", \"c-sharp\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/tree-sitter/tree-sitter-c-sharp\"\nedition = \"2018\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \">= 0.19, < 0.21\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-c-sharp",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/tree-sitter-c-sharp",
         "dest-filename": ".cargo-checksum.json"
@@ -6176,6 +6254,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/tree-sitter-clojure-fdc969e/.\" \"cargo/vendor/tree-sitter-clojure\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-clojure\"\ndescription = \"clojure grammar for the tree-sitter parsing library\"\nversion = \"0.1.0\"\nkeywords = [ \"incremental\", \"parsing\", \"clojure\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/sogaiu/tree-sitter-clojure\"\nedition = \"2018\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \">= 0.19, < 0.21\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-clojure",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
@@ -6217,6 +6301,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-css\"\ndescription = \"css grammar for the tree-sitter parsing library\"\nversion = \"0.19.0\"\nkeywords = [ \"incremental\", \"parsing\", \"css\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/tree-sitter/tree-sitter-javascript\"\nedition = \"2021\"\nlicense = \"MIT\"\nauthors = [ \"Max Brunsfeld <maxbrunsfeld@gmail.com>\",]\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \">= 0.19, < 0.21\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-css",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/tree-sitter-css",
         "dest-filename": ".cargo-checksum.json"
@@ -6226,6 +6316,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/tree-sitter-d-3660313/.\" \"cargo/vendor/tree-sitter-d\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-d\"\ndescription = \"d grammar for the tree-sitter parsing library\"\nversion = \"0.3.2\"\nkeywords = [ \"incremental\", \"parsing\", \"d\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/gdamore/tree-sitter-d\"\nedition = \"2018\"\nlicense = \"MIT\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"~0.20.3\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-d",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
@@ -6241,6 +6337,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-dart\"\ndescription = \"dart grammar for the tree-sitter parsing library\"\nversion = \"0.0.1\"\nkeywords = [ \"incremental\", \"parsing\", \"dart\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/tree-sitter/tree-sitter-javascript\"\nedition = \"2018\"\nlicense = \"MIT\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \">= 0.19, < 0.21\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-dart",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/tree-sitter-dart",
         "dest-filename": ".cargo-checksum.json"
@@ -6253,6 +6355,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-dockerfile\"\ndescription = \"dockerfile grammar for the tree-sitter parsing library\"\nversion = \"0.1.0\"\nkeywords = [ \"incremental\", \"parsing\", \"dockerfile\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/camdencheek/tree-sitter-dockerfile\"\nedition = \"2018\"\nlicense = \"MIT\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"0.20\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-dockerfile",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/tree-sitter-dockerfile",
         "dest-filename": ".cargo-checksum.json"
@@ -6262,6 +6370,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/tree-sitter-elixir-05e3631/.\" \"cargo/vendor/tree-sitter-elixir\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-elixir\"\ndescription = \"elixir grammar for the tree-sitter parsing library\"\nversion = \"0.19.0\"\nkeywords = [ \"incremental\", \"parsing\", \"elixir\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/tree-sitter/tree-sitter-elixir\"\nedition = \"2018\"\nlicense = \"Apache-2.0\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \">= 0.19, < 0.21\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-elixir",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
@@ -6290,6 +6404,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\ncategories = [ \"parsing\", \"text-editors\",]\ndescription = \"erlang grammar for the tree-sitter parsing library\"\nedition = \"2018\"\nkeywords = [ \"incremental\", \"parsing\", \"erlang\",]\nlicense = \"MIT\"\nname = \"tree-sitter-erlang\"\nversion = \"0.0.1\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"0.20.9\"\n\n[build-dependencies]\ncc = \"1.0.73\"\n",
+        "dest": "cargo/vendor/tree-sitter-erlang",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/tree-sitter-erlang",
         "dest-filename": ".cargo-checksum.json"
@@ -6302,6 +6422,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-glimmer\"\ndescription = \"glimmer grammar for the tree-sitter parsing library\"\nversion = \"0.0.1\"\nkeywords = [ \"incremental\", \"parsing\", \"glimmer\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/tree-sitter/tree-sitter-javascript\"\nedition = \"2018\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"0.20\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-glimmer",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/tree-sitter-glimmer",
         "dest-filename": ".cargo-checksum.json"
@@ -6311,6 +6437,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/tree-sitter-glsl-74329fe/.\" \"cargo/vendor/tree-sitter-glsl\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-glsl\"\ndescription = \"GLSL grammar for the tree-sitter parsing library\"\nversion = \"0.1.3\"\nkeywords = [ \"incremental\", \"parsing\", \"glsl\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/theHamsta/tree-sitter-glsl\"\nedition = \"2018\"\nlicense = \"MIT\"\nauthors = [ \"tree-sitter-c authors around Max Brunsfeld\", \"Stephan Seitz\",]\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"0.20.6\"\n\n[build-dependencies]\ncc = \"1.0.73\"\n",
+        "dest": "cargo/vendor/tree-sitter-glsl",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
@@ -6352,6 +6484,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-haskell\"\ndescription = \"haskell grammar for the tree-sitter parsing library\"\nversion = \"0.14.0\"\nkeywords = [ \"incremental\", \"parsing\", \"haskell\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/tree-sitter/tree-sitter-haskell\"\nedition = \"2018\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"0.20\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-haskell",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/tree-sitter-haskell",
         "dest-filename": ".cargo-checksum.json"
@@ -6364,6 +6502,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-haxe\"\ndescription = \"haxe grammar for the tree-sitter parsing library\"\nversion = \"0.2.2\"\nkeywords = [ \"incremental\", \"parsing\", \"haxe\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/tree-sitter/tree-sitter-haxe\"\nedition = \"2018\"\nlicense = \"MIT\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"~0.20\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-haxe",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/tree-sitter-haxe",
         "dest-filename": ".cargo-checksum.json"
@@ -6373,6 +6517,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/tree-sitter-hcl-f4aa455/.\" \"cargo/vendor/tree-sitter-hcl\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-hcl\"\ndescription = \"hcl grammar for the tree-sitter parsing library\"\nversion = \"0.0.1\"\nkeywords = [ \"incremental\", \"parsing\", \"hcl\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/tree-sitter/tree-sitter-hcl\"\nedition = \"2018\"\nlicense = \"MIT\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"~0.20\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-hcl",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
@@ -6401,6 +6551,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-java\"\ndescription = \"Java grammar for the tree-sitter parsing library\"\nversion = \"0.20.0\"\nauthors = [ \"Douglas Creager <dcreager@dcreager.net>\", \"Ayman Nadeem <aymannadeem@github.com>\",]\nlicense = \"MIT\"\nreadme = \"bindings/rust/README.md\"\nkeywords = [ \"incremental\", \"parsing\", \"java\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/tree-sitter/tree-sitter-java\"\nedition = \"2018\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \">= 0.19, < 0.21\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-java",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/tree-sitter-java",
         "dest-filename": ".cargo-checksum.json"
@@ -6426,6 +6582,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-json\"\ndescription = \"json grammar for the tree-sitter parsing library\"\nversion = \"0.20.0\"\nkeywords = [ \"incremental\", \"parsing\", \"json\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/tree-sitter/tree-sitter-json\"\nedition = \"2018\"\nlicense = \"MIT\"\nauthors = [ \"Max Brunsfeld <maxbrunsfeld@gmail.com>\",]\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"0.20\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-json",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/tree-sitter-json",
         "dest-filename": ".cargo-checksum.json"
@@ -6435,6 +6597,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/tree-sitter-julia-2ad4c9b/.\" \"cargo/vendor/tree-sitter-julia\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-julia\"\ndescription = \"julia grammar for the tree-sitter parsing library\"\nversion = \"0.19.0\"\nkeywords = [ \"incremental\", \"parsing\", \"julia\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/tree-sitter/tree-sitter-javascript\"\nedition = \"2021\"\nlicense = \"MIT\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"0.20\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-julia",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
@@ -6450,6 +6618,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-kotlin\"\ndescription = \"Kotlin grammar for the tree-sitter parsing library\"\nversion = \"0.2.11\"\nkeywords = [ \"incremental\", \"parsing\", \"kotlin\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/fwcd/tree-sitter-kotlin\"\nedition = \"2018\"\nlicense = \"MIT\"\nreadme = \"bindings/rust/README.md\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"0.20\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-kotlin",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/tree-sitter-kotlin",
         "dest-filename": ".cargo-checksum.json"
@@ -6459,6 +6633,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/tree-sitter-latex-b3b2cf2/.\" \"cargo/vendor/tree-sitter-latex\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[[bench]]\nname = \"bench_main\"\npath = \"benches/bench_main.rs\"\nharness = false\n\n[package]\nname = \"tree-sitter-latex\"\ndescription = \"latex grammar for the tree-sitter parsing library\"\nversion = \"0.2.0\"\nkeywords = [ \"incremental\", \"parsing\", \"latex\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/latex-lsp/tree-sitter-latex\"\nedition = \"2018\"\nlicense = \"MIT\"\nauthors = [ \"Patrick F\u00f6rster <patrick.foerster@outlook.de>\",]\nreadme = \"README.md\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\", \"rules/*\", \"util/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"~0.20.3\"\n\n[build-dependencies]\ncc = \"1.0\"\n\n[dev-dependencies.criterion]\nversion = \"0.3.5\"\nfeatures = [ \"html_reports\",]\n",
+        "dest": "cargo/vendor/tree-sitter-latex",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
@@ -6474,6 +6654,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-lua\"\ndescription = \"Lua grammar for the tree-sitter parsing library\"\nversion = \"0.0.12\"\nauthors = [ \"Munif Tanjim <hello@muniftanjim.dev>\",]\nlicense = \"MIT\"\nkeywords = [ \"incremental\", \"parsing\", \"lua\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/MunifTanjim/tree-sitter-lua\"\nedition = \"2018\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"0.20\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-lua",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/tree-sitter-lua",
         "dest-filename": ".cargo-checksum.json"
@@ -6483,6 +6669,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/tree-sitter-markdown-272e080/.\" \"cargo/vendor/tree-sitter-md\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[[bin]]\nname = \"benchmark\"\npath = \"benchmark/main.rs\"\n\n[package]\nname = \"tree-sitter-md\"\ndescription = \"markdown grammar for the tree-sitter parsing library\"\nversion = \"0.1.2\"\nkeywords = [ \"incremental\", \"parsing\", \"markdown\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/MDeiml/tree-sitter-markdown\"\nedition = \"2018\"\nlicense = \"MIT\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"tree-sitter-markdown/src/*\", \"tree-sitter-markdown-inline/src/*\", \"tree-sitter-markdown/queries/*\", \"tree-sitter-markdown-inline/queries/*\", \"benchmark/main.rs\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"~0.20\"\n\n[build-dependencies]\ncc = \"1.0\"\n\n[profile.release]\ndebug = true\n",
+        "dest": "cargo/vendor/tree-sitter-md",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
@@ -6498,6 +6690,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-nix\"\ndescription = \"nix grammar for the tree-sitter parsing library\"\nversion = \"0.0.1\"\nkeywords = [ \"incremental\", \"parsing\", \"nix\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/cstrahan/tree-sitter-nix\"\nedition = \"2018\"\nlicense = \"MIT\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"0.20\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-nix",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/tree-sitter-nix",
         "dest-filename": ".cargo-checksum.json"
@@ -6510,6 +6708,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-ocaml\"\ndescription = \"OCaml grammar for the tree-sitter parsing library\"\nversion = \"0.20.0\"\nauthors = [ \"Max Brunsfeld <maxbrunsfeld@gmail.com>\",]\nlicense = \"MIT\"\nreadme = \"bindings/rust/README.md\"\nkeywords = [ \"incremental\", \"parsing\", \"ocaml\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/tree-sitter/tree-sitter-ocaml\"\nedition = \"2018\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"common/*\", \"bindings/rust/*\", \"ocaml/grammar.js\", \"ocaml/src/*\", \"interface/grammar.js\", \"interface/src/*\", \"queries/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"0.20\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-ocaml",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/tree-sitter-ocaml",
         "dest-filename": ".cargo-checksum.json"
@@ -6519,6 +6723,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/tree-sitter-php-ab2e721/.\" \"cargo/vendor/tree-sitter-php\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-php\"\ndescription = \"php grammar for the tree-sitter parsing library\"\nversion = \"0.19.1\"\nkeywords = [ \"incremental\", \"parsing\", \"php\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/tree-sitter/tree-sitter-php\"\nedition = \"2018\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \">= 0.19, < 0.21\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-php",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
@@ -6547,6 +6757,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-protobuf\"\ndescription = \"protobuf grammar for the tree-sitter parsing library\"\nversion = \"0.0.1\"\nkeywords = [ \"incremental\", \"parsing\", \"protobuf\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/tree-sitter/tree-sitter-protobuf\"\nedition = \"2018\"\nlicense = \"MIT\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"~0.20.0\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-protobuf",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/tree-sitter-protobuf",
         "dest-filename": ".cargo-checksum.json"
@@ -6569,6 +6785,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/tree-sitter-ql-bd08702/.\" \"cargo/vendor/tree-sitter-ql\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-ql\"\ndescription = \"ql grammar for the tree-sitter parsing library\"\nversion = \"0.19.0\"\nkeywords = [ \"incremental\", \"parsing\", \"ql\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/tree-sitter/tree-sitter-javascript\"\nedition = \"2018\"\nlicense = \"MIT\"\nauthors = [ \"Sam Lanning <sam@samlanning.com>\",]\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \">= 0.20, < 0.21\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-ql",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
@@ -6597,6 +6819,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-ruby\"\ndescription = \"Ruby grammar for the tree-sitter parsing library\"\nversion = \"0.19.0\"\nauthors = [ \"Douglas Creager <dcreager@dcreager.net>\", \"Max Brunsfeld <maxbrunsfeld@gmail.com>\",]\nlicense = \"MIT\"\nreadme = \"bindings/rust/README.md\"\nkeywords = [ \"incremental\", \"parsing\", \"ruby\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/tree-sitter/tree-sitter-ruby\"\nedition = \"2018\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \">= 0.19, < 0.21\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-ruby",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/tree-sitter-ruby",
         "dest-filename": ".cargo-checksum.json"
@@ -6622,6 +6850,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-scheme\"\ndescription = \"scheme grammar for the tree-sitter parsing library\"\nversion = \"0.2.0\"\nkeywords = [ \"incremental\", \"parsing\", \"scheme\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/tree-sitter/tree-sitter-scheme\"\nedition = \"2018\"\nlicense = \"MIT\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"~0.20\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-scheme",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/tree-sitter-scheme",
         "dest-filename": ".cargo-checksum.json"
@@ -6631,6 +6865,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/tree-sitter-scss-3aac339/.\" \"cargo/vendor/tree-sitter-scss\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-scss\"\ndescription = \"scss grammar for the tree-sitter parsing library\"\nversion = \"0.0.1\"\nkeywords = [ \"incremental\", \"parsing\", \"scss\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/tree-sitter/tree-sitter-javascript\"\nedition = \"2018\"\nlicense = \"MIT\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"0.20\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-scss",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
@@ -6646,6 +6886,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-sql\"\ndescription = \"SQL grammar for the tree-sitter parsing library\"\nauthors = [ \"Maksim Novikov <mnovikov.work@gmail.com>\",]\nversion = \"0.0.2\"\nkeywords = [ \"incremental\", \"parsing\", \"sql\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/m-novikov/tree-sitter-sql\"\nedition = \"2018\"\nlicense = \"MIT\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"0.20.9\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-sql",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/tree-sitter-sql",
         "dest-filename": ".cargo-checksum.json"
@@ -6655,6 +6901,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/tree-sitter-svelte-52e122a/.\" \"cargo/vendor/tree-sitter-svelte\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-svelte\"\nversion = \"0.10.2\"\nauthors = [ \"Himujjal <himu@tuta.io>\",]\nreadme = \"bindings/rust/README.md\"\nkeywords = [ \"incremental\", \"parsing\", \"svelte\",]\ncategories = [ \"parsing\", \"text-editors\", \"tree_sitter\",]\nrepository = \"https://github.com/Himujjal/tree-sitter-svelte\"\nedition = \"2018\"\ndescription = \"Tree sitter grammar for Svelte\"\nlicense = \"MIT\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"0.20.6\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-svelte",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
@@ -6722,6 +6974,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-wgsl\"\ndescription = \"wgsl grammar for the tree-sitter parsing library\"\nversion = \"0.0.1\"\nkeywords = [ \"incremental\", \"parsing\", \"wgsl\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/tree-sitter/tree-sitter-wgsl\"\nedition = \"2018\"\nlicense = \"MIT\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"~0.20.0\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-wgsl",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/tree-sitter-wgsl",
         "dest-filename": ".cargo-checksum.json"
@@ -6731,6 +6989,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/tree-sitter-xml-422528a/.\" \"cargo/vendor/tree-sitter-xml\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-xml\"\ndescription = \"xml grammar for the tree-sitter parsing library\"\nversion = \"0.0.1\"\nkeywords = [ \"incremental\", \"parsing\", \"xml\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/tree-sitter/tree-sitter-xml\"\nedition = \"2018\"\nlicense = \"MIT\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"~0.20.3\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-xml",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
@@ -6746,6 +7010,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-yaml\"\ndescription = \"yaml grammar for the tree-sitter parsing library\"\nversion = \"0.0.1\"\nkeywords = [ \"incremental\", \"parsing\", \"yaml\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/panekj/tree-sitter-yaml\"\nedition = \"2018\"\nlicense = \"MIT\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"~0.20\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-yaml",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/tree-sitter-yaml",
         "dest-filename": ".cargo-checksum.json"
@@ -6755,6 +7025,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/tree-sitter-zig-8d3224c/.\" \"cargo/vendor/tree-sitter-zig\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"tree-sitter-zig\"\ndescription = \"zig grammar for the tree-sitter parsing library\"\nversion = \"0.0.1\"\nkeywords = [ \"incremental\", \"parsing\", \"zig\",]\ncategories = [ \"parsing\", \"text-editors\",]\nrepository = \"https://github.com/tree-sitter/tree-sitter-zig\"\nedition = \"2018\"\nlicense = \"MIT\"\nbuild = \"bindings/rust/build.rs\"\ninclude = [ \"bindings/rust/*\", \"grammar.js\", \"queries/*\", \"src/*\",]\n\n[lib]\npath = \"bindings/rust/lib.rs\"\n\n[dependencies]\ntree-sitter = \"~0.20\"\n\n[build-dependencies]\ncc = \"1.0\"\n",
+        "dest": "cargo/vendor/tree-sitter-zig",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
@@ -7339,6 +7615,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/wasi-experimental-http-5c6d970/crates/wasi-experimental-http-wasmtime\" \"cargo/vendor/wasi-experimental-http-wasmtime\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"wasi-experimental-http-wasmtime\"\nversion = \"0.10.0\"\nauthors = [ \"Radu Matei <radu.matei@microsoft.com>\",]\nedition = \"2021\"\nrepository = \"https://github.com/deislabs/wasi-experimental-http\"\nlicense = \"MIT\"\ndescription = \"Experimental HTTP library for WebAssembly in Wasmtime\"\nreadme = \"readme.md\"\n\n[dependencies]\nanyhow = \"1.0\"\nbytes = \"1\"\nfutures = \"0.3\"\nhttp = \"0.2\"\nthiserror = \"1.0\"\nurl = \"2.2.1\"\nwasmtime = \"1.0.0\"\nwasmtime-wasi = \"1.0.0\"\nwasi-common = \"1.0.0\"\n\n[dependencies.reqwest]\nversion = \"0.11\"\ndefault-features = true\nfeatures = [ \"json\", \"blocking\",]\n\n[dependencies.tokio]\nversion = \"1.4.0\"\nfeatures = [ \"full\",]\n\n[dependencies.tracing]\nversion = \"0.1\"\nfeatures = [ \"log\",]\n",
+        "dest": "cargo/vendor/wasi-experimental-http-wasmtime",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
