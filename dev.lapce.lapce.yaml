@@ -19,8 +19,6 @@ modules:
     sources:
       - lapce-git.json
       - generated-sources.json
-      - type: patch
-        path: alacritty-no-controlling-term.patch
     buildsystem: simple
     build-commands:
       - cargo --offline fetch --manifest-path Cargo.toml --verbose
