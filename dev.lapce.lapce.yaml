@@ -31,4 +31,5 @@ modules:
       append-path: /usr/lib/sdk/rust-stable/bin
       env:
         CARGO_HOME: /run/build/lapce/cargo
+        CARGO_PROFILE_RELEASE_DEBUG: true
         RELEASE_TAG_NAME: v0.4.0
