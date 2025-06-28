@@ -1955,19 +1955,6 @@
         "dest-filename": ".cargo-checksum.json"
     },
     {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/dpi/dpi-0.1.1.crate",
-        "sha256": "f25c0e292a7ca6d6498557ff1df68f32c99850012b6ea401cf8daf771f22ff53",
-        "dest": "cargo/vendor/dpi-0.1.1"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"f25c0e292a7ca6d6498557ff1df68f32c99850012b6ea401cf8daf771f22ff53\", \"files\": {}}",
-        "dest": "cargo/vendor/dpi-0.1.1",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
         "type": "shell",
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/winit-ee245c5/dpi\" \"cargo/vendor/dpi\""
