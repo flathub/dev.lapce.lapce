@@ -37,5 +37,6 @@ jobs:
           set -e
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git config user.name "Github workflow"
+          pip install tomlkit
           ./update.py lapce-git.json -g builder-tools/cargo/flatpak-cargo-generator.py -k
           git push https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}
